@@ -1,0 +1,4 @@
+'.source.smtlib':
+  'editor':
+    'commentStart': ';'
+    'increaseIndentPattern': '^.*\\(.*[^)"]$'

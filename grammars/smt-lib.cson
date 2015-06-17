@@ -1,0 +1,87 @@
+'comment': ''
+'fileTypes': [
+  'smt2'
+]
+'name': 'SMT-LIB'
+'patterns': [
+  {
+    'begin': '(^[ \\t]+)?(?=;)'
+    'beginCaptures':
+      '1':
+        'name': 'punctuation.whitespace.comment.leading.smtlib'
+    'end': '(?!\\G)'
+    'patterns': [
+      {
+        'begin': ';'
+        'beginCaptures':
+          '0':
+            'name': 'punctuation.definition.comment.smtlib'
+        'end': '\\n'
+        'name': 'comment.line.semicolon.smtlib'
+      }
+    ]
+  }
+  {
+    'captures':
+      '2':
+        'name': 'storage.type.function-type.smtlib'
+      '4':
+        'name': 'entity.name.function.smtlib'
+    'match': '(\\b(?i:(declare-fun|define-fun|declare-sort|define-sort))\\b)(\\s+)((\\w|\\-|\\!|\\?)*)'
+    'name': 'meta.function.smtlib'
+  }
+  {
+    'captures':
+      '1':
+        'name': 'punctuation.definition.constant.smtlib'
+    'match': '(#)(\\w|[\\\\+-=<>\'"&#])+'
+    'name': 'constant.character.smtlib'
+  }
+  {
+    'captures':
+      '1':
+        'name': 'punctuation.definition.variable.smtlib'
+      '3':
+        'name': 'punctuation.definition.variable.smtlib'
+    'match': '(\\*)(\\S*)(\\*)'
+    'name': 'variable.other.global.smtlib'
+  }
+  {
+    'match': '\\b(?i:as|ite)\\b'
+    'name': 'keyword.control.smtlib'
+  }
+  {
+    'match': '\\b(?i:not|and|forall|exists|=>|=|<|>|=<|>=)\\b'
+    'name': 'keyword.operator.smtlib'
+  }
+  {
+    'match': '\\b(?i:emptyset)\\b'
+    'name': 'constant.language.smtlib'
+  }
+  {
+    'match': '\\b(?i:singleton|assert|set-logic)\\b'
+    'name': 'support.function.smtlib'
+  }
+  {
+    'match': '\\b((0(x|X)[0-9a-fA-F]*)|(([0-9]+\\.?[0-9]*)|(\\.[0-9]+))((e|E)(\\+|-)?[0-9]+)?)(L|l|UL|ul|u|U|F|f|ll|LL|ull|ULL)?\\b'
+    'name': 'constant.numeric.smtlib'
+  }
+  {
+    'begin': '"'
+    'beginCaptures':
+      '0':
+        'name': 'punctuation.definition.string.begin.smtlib'
+    'end': '"'
+    'endCaptures':
+      '0':
+        'name': 'punctuation.definition.string.end.smtlib'
+    'name': 'string.quoted.double.smtlib'
+    'patterns': [
+      {
+        'match': '\\\\.'
+        'name': 'constant.character.escape.smtlib'
+      }
+    ]
+  }
+]
+'scopeName': 'source.smtlib'
