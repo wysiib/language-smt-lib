@@ -47,24 +47,40 @@
     'name': 'variable.other.global.smtlib'
   }
   {
-    'match': '\\b(?i:as|ite)\\b'
+    'match': '\\b(as|ite)\\b'
     'name': 'keyword.control.smtlib'
   }
   {
-    'match': '\\b(?i:not|and|forall|exists|=>|=|<|>|=<|>=)\\b'
+    'match': '\\b(not|and|forall|exists)\\b'
     'name': 'keyword.operator.smtlib'
   }
   {
-    'match': '\\b(?i:emptyset)\\b'
+    'match': '(=>|=|<|>|=<|>=)'
+    'name': 'keyword.operator.smtlib'
+  }
+  {
+    'match': '\\b(emptyset)\\b'
     'name': 'constant.language.smtlib'
   }
   {
-    'match': '\\b(?i:singleton|assert|set-logic)\\b'
+    'match': '\\b(singleton|assert|set-logic)\\b'
     'name': 'support.function.smtlib'
   }
   {
     'match': '\\b((0(x|X)[0-9a-fA-F]*)|(([0-9]+\\.?[0-9]*)|(\\.[0-9]+))((e|E)(\\+|-)?[0-9]+)?)(L|l|UL|ul|u|U|F|f|ll|LL|ull|ULL)?\\b'
     'name': 'constant.numeric.smtlib'
+  }
+  {
+    'match': '\\('
+    'name': 'entity.paren.smtlib'
+  }
+  {
+    'match': '\\)'
+    'name': 'entity.paren.smtlib'
+  }
+  {
+    'match': '\\b[a-zA-Z][a-zA-Z0-9_]*\\b'
+    'name': 'identifier.smtlib'
   }
   {
     'begin': '"'
