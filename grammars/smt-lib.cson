@@ -63,7 +63,11 @@
     'name': 'constant.language.smtlib'
   }
   {
-    'match': '\\b(singleton|assert|set-logic)\\b'
+    'match': '\\b(assert|set-logic|check-sat)\\b'
+    'name': 'support.function.smtlib'
+  }
+  {
+    'match': '\\b(singleton|insert|member)\\b'
     'name': 'support.function.smtlib'
   }
   {
