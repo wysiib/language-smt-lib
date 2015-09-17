@@ -63,7 +63,7 @@
     'name': 'constant.language.smtlib'
   }
   {
-    'match': '\\b(assert|set-logic|check-sat)\\b'
+    'match': '\\b(assert|set-logic|check-sat|get-model)\\b'
     'name': 'support.function.smtlib'
   }
   {
