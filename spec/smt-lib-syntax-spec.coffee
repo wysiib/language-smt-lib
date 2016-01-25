@@ -20,7 +20,7 @@ describe 'SMT-LIB grammar', ->
       expect(tokens[5]).toEqual value: '5', scopes: [ 'source.smtlib', 'constant.numeric.smtlib' ]
 
   describe "operators", ->
-    it "tokenizes some operators correctly", ->
+    it "tokenizes some arithmetic operators correctly", ->
       {tokens} = grammar.tokenizeLine "(=> (> x 15) (> x 10))"
       expect(tokens[1]).toEqual value: '=>', scopes: [ 'source.smtlib', 'keyword.operator.smtlib' ]
       expect(tokens[4]).toEqual value: '>', scopes: [ 'source.smtlib', 'keyword.operator.smtlib' ]
