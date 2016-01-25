@@ -1,3 +1,6 @@
+## 0.2.1
+* add missing get-value to highlighter
+
 ## 0.2.0
 * add get-model to highlighter
 
